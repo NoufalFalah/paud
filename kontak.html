@@ -2,12 +2,23 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kontak Kami - PAUD Ta'am Insan Taqwa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAF8; overflow-x: hidden; scroll-behavior: smooth; }
+        /* CSS SAKTI: Mengunci sumbu X agar tidak bisa digeser ke samping */
+        html, body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #F8FAF8; 
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden; 
+            scroll-behavior: smooth; 
+        }
+
         .fade-in { animation: fadeIn 1.2s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
@@ -16,13 +27,16 @@
             transition: all 0.5s ease;
         }
         .map-frame:hover { filter: grayscale(0) opacity(1); }
+
+        /* Mencegah overflow pada elemen kontainer */
+        section, div { max-width: 100%; }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="text-slate-800 overflow-x-hidden">
 
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#E6EDE7] px-6 lg:px-20 py-5 flex justify-between items-center transition-all">
         <div class="flex items-center space-x-3">
-            <div class="w-11 h-11 bg-[#86A789] rounded-2xl flex items-center justify-center text-white font-black shadow-xl shadow-[#86A789]/20 italic italic">IT</div>
+            <div class="w-11 h-11 bg-[#86A789] rounded-2xl flex items-center justify-center text-white font-black shadow-xl shadow-[#86A789]/20 italic">IT</div>
             <div class="leading-none text-slate-900">
                 <h1 class="text-xs font-black tracking-widest uppercase leading-none">PAUD Ta'am</h1>
                 <p class="text-[8px] text-[#86A789] font-black uppercase tracking-[0.3em] mt-1.5 leading-none">Insan Taqwa</p>
@@ -55,21 +69,21 @@
                         <h3 class="text-[10px] font-black text-[#86A789] uppercase tracking-[0.4em] mb-8">Informasi Kantor</h3>
                         <div class="space-y-8">
                             <div class="flex items-start space-x-6">
-                                <div class="w-12 h-12 bg-[#F2F5F2] rounded-2xl flex items-center justify-center text-xl">📍</div>
+                                <div class="w-12 h-12 bg-[#F2F5F2] rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">📍</div>
                                 <div>
                                     <h4 class="font-black text-xs uppercase tracking-widest mb-2">Lokasi Sekolah</h4>
                                     <p class="text-slate-500 text-[11px] font-bold uppercase leading-relaxed">Kel. Harapan Jaya, Kec. Cibinong,<br>Kabupaten Bogor, Jawa Barat.</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-6">
-                                <div class="w-12 h-12 bg-[#F2F5F2] rounded-2xl flex items-center justify-center text-xl">📞</div>
+                                <div class="w-12 h-12 bg-[#F2F5F2] rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">📞</div>
                                 <div>
                                     <h4 class="font-black text-xs uppercase tracking-widest mb-2">Telepon / WhatsApp</h4>
                                     <p class="text-slate-500 text-[11px] font-bold uppercase leading-relaxed">+62 812-xxxx-xxxx</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-6">
-                                <div class="w-12 h-12 bg-[#F2F5F2] rounded-2xl flex items-center justify-center text-xl">✉</div>
+                                <div class="w-12 h-12 bg-[#F2F5F2] rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">✉</div>
                                 <div>
                                     <h4 class="font-black text-xs uppercase tracking-widest mb-2">Email Resmi</h4>
                                     <p class="text-slate-500 text-[11px] font-bold uppercase leading-relaxed">info@insantaqwa.sch.id</p>
@@ -78,14 +92,14 @@
                         </div>
                     </div>
                     
-                    <div class="w-full h-64 bg-[#F2F5F2] rounded-[3rem] border border-[#DDE6DE] overflow-hidden shadow-inner map-frame">
+                    <div class="w-full h-64 lg:h-80 bg-[#F2F5F2] rounded-[3rem] border border-[#DDE6DE] overflow-hidden shadow-inner map-frame">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15854.747193231175!2d106.8282365!3d-6.434255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ea59419b48f5%3A0xc0f1b29a28e7520e!2sCibinong%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15854.722650849363!2d106.8407421!3d-6.4350742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c104256249a5%3A0xc6a8286904d9c02!2sCibinong%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
 
-                <div class="bg-[#3E4A3F] p-10 lg:p-14 rounded-[4rem] shadow-2xl border border-[#4F5D50]">
+                <div class="bg-[#3E4A3F] p-8 lg:p-14 rounded-[3rem] lg:rounded-[4rem] shadow-2xl border border-[#4F5D50]">
                     <h3 class="text-[#86A789] font-black text-[10px] uppercase tracking-[0.4em] mb-10">Kirim Pesan</h3>
                     <form class="space-y-6">
                         <div>
@@ -100,7 +114,7 @@
                             <label class="text-[9px] font-black text-[#86A789] uppercase tracking-widest block mb-3">Pesan Anda</label>
                             <textarea rows="4" placeholder="Tuliskan pesan Anda di sini..." class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-xs focus:outline-none focus:border-[#86A789] transition"></textarea>
                         </div>
-                        <button type="submit" class="w-full py-5 bg-[#86A789] text-white font-black rounded-2xl uppercase text-[10px] tracking-widest hover:bg-white hover:text-[#3E4A3F] transition-all shadow-xl shadow-[#000/20]">Kirim Pesan Sekarang</button>
+                        <button type="submit" class="w-full py-5 bg-[#86A789] text-white font-black rounded-2xl uppercase text-[10px] tracking-widest hover:bg-white hover:text-[#3E4A3F] transition-all shadow-xl">Kirim Pesan Sekarang</button>
                     </form>
                 </div>
 
@@ -109,10 +123,10 @@
     </section>
 
     <footer class="py-24 px-6 lg:px-20 text-center bg-white">
-        <p class="text-[9px] font-black text-slate-300 uppercase tracking-[0.7em] mb-12 italic italic italic">
-            &copy; 2026 PAUD Ta'am Insan Taqwa Cibinong
+        <p class="text-[9px] font-black text-slate-300 uppercase tracking-[0.7em] mb-12 italic">
+            © 2026 PAUD Ta'am Insan Taqwa Cibinong
         </p>
-        <div class="pt-14 border-t border-slate-50 w-full flex justify-center uppercase uppercase uppercase">
+        <div class="pt-14 border-t border-slate-50 w-full flex justify-center">
             <a href="index.html" class="flex items-center space-x-4 text-[9px] font-black text-slate-200 hover:text-[#86A789] transition-all uppercase tracking-[0.5em] group">
                 <span class="w-2 h-2 rounded-full bg-slate-50 group-hover:bg-[#86A789] transition-colors"></span>
                 <span>Kembali ke Beranda</span>

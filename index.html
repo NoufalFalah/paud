@@ -2,13 +2,30 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Beranda - PAUD Ta'am Insan Taqwa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAF8; overflow-x: hidden; scroll-behavior: smooth; }
+        /* CSS SAKTI: Mengunci layar agar tidak bisa geser ke kanan (menghilangkan blank putih) */
+        html, body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #F8FAF8; 
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden; /* Mengunci sumbu X */
+            scroll-behavior: smooth; 
+        }
         
+        /* Mengamankan slider agar tetap berada di jalurnya */
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
         .slider-track {
             display: flex;
             width: max-content;
@@ -30,7 +47,7 @@
         }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="text-slate-800 overflow-x-hidden">
 
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#E6EDE7] px-6 lg:px-20 py-5 flex justify-between items-center transition-all">
         <div class="flex items-center space-x-3">
@@ -82,7 +99,7 @@
         </div>
     </section>
 
-    <div class="py-16 bg-white border-y border-[#F0F5F1]">
+    <div class="py-16 bg-white border-y border-[#F0F5F1] slider-container">
         <div class="slider-track gap-10 px-5">
             <div class="w-[400px] h-[280px] bg-[#F2F5F2] rounded-[3.5rem] flex-shrink-0 flex items-center justify-center text-[#CED9D0] font-black italic border border-[#E8EEE9] uppercase text-[10px] tracking-[0.4em]">Dokumentasi 1</div>
             <div class="w-[400px] h-[280px] bg-white rounded-[3.5rem] flex-shrink-0 flex items-center justify-center text-[#CED9D0] font-black italic border border-[#E8EEE9] uppercase text-[10px] tracking-[0.4em]">Dokumentasi 2</div>
@@ -97,16 +114,14 @@
             <div>
                 <h3 class="text-[9px] font-black text-[#86A789] uppercase tracking-[0.5em] mb-8">Filosofi Pendidikan</h3>
                 <h2 class="text-4xl lg:text-[3.5rem] font-extrabold leading-[1.1] mb-10 tracking-tighter italic uppercase">Harmoni Adab & <br>Karakter Anak.</h2>
-                
                 <div class="space-y-6 mb-12">
                     <p class="text-slate-500 text-sm font-medium leading-relaxed opacity-90">
                         Kami mengusung visi <span class="text-[#86A789] font-bold">"Insan Taqwa"</span>, yang berarti setiap langkah pembelajaran didasarkan pada keteladanan dan kasih sayang. Bukan sekadar angka, kami fokus pada pertumbuhan jiwa.
                     </p>
                     <p class="text-slate-500 text-sm font-medium leading-relaxed opacity-90">
-                        Melalui kurikulum yang terintegrasi, anak-anak diajarkan untuk mencintai lingkungan, menghormati orang tua, dan berani mengeksplorasi kreativitas mereka tanpa batas dalam nuansa hijau yang menyejukkan.
+                        Melalui kurikulum yang terintegrasi, anak-anak diajarkan untuk mencintai lingkungan, menghormati orang tua, dan berani mengeksplorasi kreativitas mereka tanpa batas.
                     </p>
                 </div>
-
                 <div class="flex space-x-6">
                     <div class="px-8 py-5 bg-[#F2F5F2] rounded-[2rem] text-[9px] font-black text-[#86A789] tracking-widest border border-[#DDE6DE] uppercase">Inovatif</div>
                     <div class="px-8 py-5 bg-[#F2F5F2] rounded-[2rem] text-[9px] font-black text-[#86A789] tracking-widest border border-[#DDE6DE] uppercase">Islami</div>
@@ -131,19 +146,19 @@
             <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tighter uppercase mb-24">Alur Administrasi</h2>
             <div class="grid md:grid-cols-3 gap-24">
                 <div class="group">
-                    <div class="text-7xl font-black text-white/[0.03] mb-5 tracking-tighter italic italic">01</div>
+                    <div class="text-7xl font-black text-white/[0.03] mb-5 tracking-tighter italic">01</div>
                     <h4 class="font-black uppercase text-[10px] mb-5 tracking-[0.3em] text-[#86A789]">Formulir</h4>
                     <p class="text-slate-400 text-[11px] font-bold uppercase tracking-tighter leading-relaxed italic">Input data online.</p>
                 </div>
                 <div class="group">
-                    <div class="text-7xl font-black text-white/[0.03] mb-5 tracking-tighter italic italic italic">02</div>
+                    <div class="text-7xl font-black text-white/[0.03] mb-5 tracking-tighter italic">02</div>
                     <h4 class="font-black uppercase text-[10px] mb-5 tracking-[0.3em] text-[#86A789]">Validasi</h4>
-                    <p class="text-slate-400 text-[11px] font-bold uppercase tracking-tighter leading-relaxed italic italic">Proses verifikasi.</p>
+                    <p class="text-slate-400 text-[11px] font-bold uppercase tracking-tighter leading-relaxed italic">Proses verifikasi.</p>
                 </div>
                 <div class="group">
-                    <div class="text-7xl font-black text-white/[0.03] mb-5 tracking-tighter italic italic italic italic">03</div>
+                    <div class="text-7xl font-black text-white/[0.03] mb-5 tracking-tighter italic">03</div>
                     <h4 class="font-black uppercase text-[10px] mb-3 tracking-[0.3em] text-[#86A789]">Selesai</h4>
-                    <p class="text-slate-400 text-[11px] font-bold uppercase tracking-tighter leading-relaxed italic italic italic">Konfirmasi sistem.</p>
+                    <p class="text-slate-400 text-[11px] font-bold uppercase tracking-tighter leading-relaxed italic">Konfirmasi sistem.</p>
                 </div>
             </div>
         </div>
