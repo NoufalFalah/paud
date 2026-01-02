@@ -189,15 +189,6 @@
             line3.classList.toggle('-translate-y-2');
             document.body.classList.toggle('overflow-hidden');
         });
-
-        // Menutup menu saat link diklik (opsional, agar lebih user-friendly)
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
-                line1.classList.remove('rotate-45', 'translate-y-2');
-                line2.classList.remove('opacity-0');
-                line3.classList.remove('-rotate-45', '-translate-y-2');
-                document.body.classList.remove('overflow-hidden');
-            });
-        });
     </script>
+</body>
+</html>
