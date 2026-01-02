@@ -14,14 +14,12 @@
             margin: 0; padding: 0; 
             scroll-behavior: smooth;
             width: 100%;
-            overflow-x: hidden; /* Mencegah geser kanan kiri */
+            overflow-x: hidden;
         }
 
-        /* Sembunyikan Scrollbar */
         html::-webkit-scrollbar { display: none; }
         html { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Slider Track */
         .slider-container { width: 100%; overflow: hidden; position: relative; z-index: 10; }
         .slider-track { display: flex; width: max-content; animation: scroll 40s linear infinite; padding: 20px 0; }
         
@@ -33,13 +31,11 @@
         .fade-in { animation: fadeIn 1.2s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* PERBAIKAN: Z-Index lebih tinggi agar tidak terpotong slider */
         .float-card { 
             animation: float 6s ease-in-out infinite; 
-            z-index: 40; 
-            position: absolute;
         }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes float { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -15px); } }
+        /* Note: translate -50% ditambahkan agar tidak merusak posisi centering horizontal */
     </style>
 </head>
 <body class="text-slate-800">
@@ -76,31 +72,40 @@
         </div>
     </nav>
 
-    <section class="min-h-screen pt-48 lg:pt-0 flex items-center px-6 lg:px-20 overflow-hidden relative">
+    <section class="min-h-screen pt-40 lg:pt-0 flex items-center px-6 lg:px-20 overflow-hidden relative">
         <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
-                <div class="lg:w-3/5 fade-in z-10 text-center lg:text-left">
-                    <span class="text-[#86A789] font-black text-[9px] uppercase tracking-[0.4em] mb-6 block bg-[#EDF3EE] w-fit px-5 py-2.5 rounded-full border border-[#DDE6DE] mx-auto lg:mx-0">Edukasi Karakter & Digital</span>
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
+                
+                <div class="lg:w-3/5 fade-in z-10 text-center lg:text-left flex flex-col items-center lg:items-start">
+                    <span class="text-[#86A789] font-black text-[9px] uppercase tracking-[0.4em] mb-6 block bg-[#EDF3EE] w-fit px-5 py-2.5 rounded-full border border-[#DDE6DE]">Edukasi Karakter & Digital</span>
                     <h2 class="text-5xl lg:text-[6.8rem] font-extrabold text-[#2A332B] leading-[1.1] lg:leading-[0.95] tracking-tighter mb-10">
                         Belajar & <br> <span class="text-[#86A789] italic font-light">Tumbuh Ceria.</span>
                     </h2>
-                    <p class="text-slate-500 text-base lg:text-xl leading-relaxed mb-12 max-w-lg font-medium opacity-90 mx-auto lg:mx-0">Membimbing putra-putri Anda dengan kasih sayang dalam lingkungan bernuansa hijau yang menenangkan dan Islami.</p>
-                    <a href="pendaftaran.html" class="inline-block px-10 py-5 bg-slate-900 text-white font-black rounded-2xl shadow-2xl hover:bg-[#86A789] transition-all uppercase text-[10px] tracking-widest">Registrasi Online</a>
+                    <p class="text-slate-500 text-base lg:text-xl leading-relaxed mb-12 max-w-lg font-medium opacity-90">Membimbing putra-putri Anda dengan kasih sayang dalam lingkungan bernuansa hijau yang Islami.</p>
+                    
+                    <div class="relative w-full flex flex-col items-center lg:items-start mb-16 lg:mb-0">
+                        <a href="pendaftaran.html" class="inline-block px-10 py-5 bg-slate-900 text-white font-black rounded-2xl shadow-2xl hover:bg-[#86A789] transition-all uppercase text-[10px] tracking-widest">Registrasi Online</a>
+                    </div>
                 </div>
                 
-                <div class="lg:w-2/5 flex justify-center relative fade-in w-full pb-20 lg:pb-0">
-                    <div class="relative w-full max-w-[340px] aspect-[3/4] bg-white rounded-[4rem] lg:rounded-[5rem] border-[10px] lg:border-[12px] border-white shadow-2xl overflow-hidden z-20 flex items-center justify-center text-[#CFD9D0] font-black italic uppercase text-xs px-10 text-center tracking-widest">Preview Foto Seragam</div>
-                    
-                    <div class="absolute -bottom-6 lg:-bottom-10 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 bg-white p-6 lg:p-9 rounded-[2rem] lg:rounded-[3rem] shadow-2xl z-30 border border-[#F2F5F2] float-card w-max">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-[#EDF3EE] rounded-xl flex items-center justify-center text-lg">🍃</div>
-                            <div>
-                                <h4 class="text-slate-900 font-black text-[8px] uppercase tracking-widest leading-none">Status</h4>
-                                <p class="text-[#86A789] text-[8px] font-black uppercase mt-1 tracking-widest italic leading-none">Terakreditasi A</p>
+                <div class="lg:w-2/5 flex justify-center relative fade-in w-full pb-10 lg:pb-0">
+                    <div class="relative">
+                        <div class="relative w-full max-w-[280px] lg:max-w-[340px] aspect-[3/4] bg-white rounded-[4rem] lg:rounded-[5rem] border-[10px] lg:border-[12px] border-white shadow-2xl overflow-hidden z-20 flex items-center justify-center text-[#CFD9D0] font-black italic uppercase text-[10px] px-10 text-center tracking-widest">
+                            Preview Foto Seragam
+                        </div>
+
+                        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white p-6 lg:p-8 rounded-[2.5rem] shadow-2xl z-30 border border-[#F2F5F2] float-card w-max min-w-[180px]">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-[#EDF3EE] rounded-xl flex items-center justify-center text-lg">🍃</div>
+                                <div class="text-left">
+                                    <h4 class="text-slate-900 font-black text-[8px] uppercase tracking-widest leading-none">Status</h4>
+                                    <p class="text-[#86A789] text-[8px] font-black uppercase mt-1.5 tracking-widest italic leading-none">Terakreditasi A</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -164,7 +169,6 @@
 
     <footer class="py-16 text-center bg-white border-t border-[#F0F5F1]">
         <p class="text-[8px] font-black text-slate-300 uppercase tracking-widest italic">&copy; 2026 PAUD Ta'am Insan Taqwa Cibinong</p>
-        
         <div class="pt-10 border-t border-slate-50 w-full flex justify-center mt-10">
             <a href="login.html" class="flex items-center space-x-4 text-[9px] font-black text-slate-200 hover:text-[#86A789] transition-all uppercase tracking-[0.5em] group">
                 <span class="w-2 h-2 rounded-full bg-slate-100 group-hover:bg-[#86A789] transition-colors"></span>
