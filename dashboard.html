@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - PAUD Ta'am</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-[#F8FAFC] flex min-h-screen">
+
+    <aside class="w-24 lg:w-72 bg-slate-900 text-slate-400 p-8 flex flex-col border-r border-slate-800">
+        <div class="mb-20 flex items-center space-x-3">
+            <div class="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center text-slate-900 font-black">IT</div>
+            <span class="hidden lg:block text-white font-black text-sm uppercase tracking-tighter">Admin Panel</span>
+        </div>
+        <nav class="flex-1 space-y-4">
+            <a href="#" class="flex items-center space-x-4 p-4 bg-slate-800 text-amber-500 rounded-2xl shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                <span class="hidden lg:block text-[11px] font-black uppercase tracking-widest">Dashboard</span>
+            </a>
+            <a href="manajemen.html" class="flex items-center space-x-4 p-4 hover:bg-slate-800 transition rounded-2xl">
+                <span class="w-2 h-2 rounded-full bg-slate-700"></span>
+                <span class="hidden lg:block text-[11px] font-black uppercase tracking-widest">Data Murid</span>
+            </a>
+        </nav>
+        <a href="login.html" class="text-[10px] font-black text-red-400 uppercase tracking-widest hover:text-red-300">Logout</a>
+    </aside>
+
+    <main class="flex-1 p-12">
+        <header class="mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-3xl font-black text-slate-900">Ringkasan Sistem</h2>
+                <p class="text-slate-400 text-sm italic">Selamat datang kembali, Tenaga Administrasi.</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-[10px] font-black uppercase tracking-widest">Tahun Ajaran 2026/2027</div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100">
+                <p class="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-4">Pendaftar Masuk</p>
+                <h3 class="text-4xl font-black text-slate-900 tracking-tighter">48 <span class="text-xs text-slate-300 ml-2 font-normal italic">Siswa</span></h3>
+            </div>
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100">
+                <p class="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-4">Verifikasi Berkas</p>
+                <h3 class="text-4xl font-black text-amber-500 tracking-tighter">12 <span class="text-xs text-slate-300 ml-2 font-normal italic">Proses</span></h3>
+            </div>
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100">
+                <p class="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-4">Diterima Resmi</p>
+                <h3 class="text-4xl font-black text-green-500 tracking-tighter">36 <span class="text-xs text-slate-300 ml-2 font-normal italic">Siswa</span></h3>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

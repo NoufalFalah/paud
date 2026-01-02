@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Murid - PAUD Ta'am Insan Taqwa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-[#F8FAFC] flex min-h-screen">
+
+    <aside class="w-20 lg:w-72 bg-slate-900 text-slate-400 flex flex-col border-r border-slate-800 sticky top-0 h-screen transition-all">
+        <div class="p-8 mb-10 flex items-center space-x-3">
+            <div class="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center text-slate-900 font-black">IT</div>
+            <span class="hidden lg:block text-white font-black text-sm uppercase tracking-tighter">Admin Panel</span>
+        </div>
+        <nav class="flex-1 px-4 space-y-2">
+            <a href="dashboard.html" class="flex items-center space-x-4 p-4 hover:bg-slate-800 rounded-2xl group">
+                <div class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-amber-500"></div>
+                <span class="hidden lg:block text-[10px] font-black uppercase tracking-[0.2em]">Dashboard</span>
+            </a>
+            <a href="manajemen.html" class="flex items-center space-x-4 p-4 bg-slate-800 text-amber-500 rounded-2xl">
+                <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                <span class="hidden lg:block text-[10px] font-black uppercase tracking-[0.2em]">Data Murid</span>
+            </a>
+        </nav>
+        <div class="p-8 border-t border-slate-800">
+            <a href="login.html" class="text-[10px] font-black text-red-400 uppercase tracking-widest">Logout</a>
+        </div>
+    </aside>
+
+    <main class="flex-1 p-6 lg:p-12 min-w-0">
+        <div class="flex items-center space-x-4 mb-8 text-[10px] font-black uppercase tracking-widest text-slate-400">
+            <a href="manajemen.html" class="hover:text-slate-900 transition">Data Murid</a>
+            <span>/</span>
+            <span class="text-slate-900">Detail Pendaftaran</span>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-1 space-y-6">
+                <div class="bg-white rounded-[3rem] p-8 shadow-sm border border-slate-100 text-center">
+                    <div class="w-24 h-24 bg-slate-50 rounded-3xl mx-auto mb-6 flex items-center justify-center text-3xl font-black text-amber-500 italic shadow-inner">
+                        Z
+                    </div>
+                    <h2 class="text-xl font-black text-slate-900 uppercase">Zidane Al-Ghifari</h2>
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">ID: #2026001</p>
+                    
+                    <div class="mt-8 pt-8 border-t border-slate-50 space-y-3">
+                        <button class="w-full py-4 bg-green-500 text-white rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-lg shadow-green-100 hover:bg-green-600 transition">Terima & Simpan ke Buku Induk</button>
+                        <button class="w-full py-4 bg-white border border-slate-200 text-red-500 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-red-50 transition">Data Tidak Valid</button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white">
+                    <h4 class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-6">Status Pendaftaran</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-400">Formulir Digital</span>
+                            <span class="text-green-400 font-bold uppercase text-[9px]">Selesai</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-400">Verifikasi Berkas</span>
+                            <span class="text-amber-500 font-bold uppercase text-[9px]">Proses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-[3.5rem] shadow-xl shadow-slate-200/50 border border-white overflow-hidden">
+                    <div class="flex border-b border-slate-50 px-10">
+                        <button class="py-6 text-[10px] font-black uppercase tracking-widest border-b-2 border-amber-500 text-slate-900 mr-10">Biodata Murid</button>
+                        <button class="py-6 text-[10px] font-black uppercase tracking-widest text-slate-300 hover:text-slate-500 transition">Orang Tua / Wali</button>
+                    </div>
+
+                    <div class="p-10 lg:p-16 space-y-12">
+                        <section>
+                            <h3 class="text-[10px] font-black text-amber-600 uppercase tracking-[0.3em] mb-8">A. Identitas Calon Murid</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
+                                <div>
+                                    <p class="text-[9px] font-black text-slate-400 uppercase mb-1">Nama Panggilan</p>
+                                    <p class="text-sm font-bold text-slate-800">Zidane</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] font-black text-slate-400 uppercase mb-1">Tempat, Tanggal Lahir</p>
+                                    <p class="text-sm font-bold text-slate-800">Bogor, 12 Januari 2021</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] font-black text-slate-400 uppercase mb-1">Jenis Kelamin</p>
+                                    <p class="text-sm font-bold text-slate-800">Laki-laki</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] font-black text-slate-400 uppercase mb-1">Agama</p>
+                                    <p class="text-sm font-bold text-slate-800">Islam</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="pt-12 border-t border-slate-50">
+                            <h3 class="text-[10px] font-black text-amber-600 uppercase tracking-[0.3em] mb-8">B. Data Orang Tua / Wali</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
+                                <div>
+                                    <p class="text-[9px] font-black text-slate-400 uppercase mb-1">Nama Ayah / Ibu</p>
+                                    <p class="text-sm font-bold text-slate-800">Iwan Setiawan</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] font-black text-slate-400 uppercase mb-1">Nomor WhatsApp</p>
+                                    <p class="text-sm font-bold text-slate-800">0812-3456-7890</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <p class="text-[9px] font-black text-slate-400 uppercase mb-1">Alamat Domisili</p>
+                                    <p class="text-sm font-bold text-slate-800 leading-relaxed uppercase">Desa Harapan Jaya, Kec. Cibinong, Kab. Bogor.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="pt-12 border-t border-slate-50">
+                            <div class="bg-slate-50 p-6 rounded-3xl flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-lg italic shadow-sm">💡</div>
+                                    <p class="text-[10px] text-slate-400 font-bold leading-relaxed max-w-xs">Data ini diinput secara mandiri oleh wali murid melalui formulir pendaftaran digital[cite: 101, 299].</p>
+                                </div>
+                                <button class="text-[9px] font-black text-slate-900 border-b border-slate-900">Edit Data</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
